@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface IBookmark {
     id: string;
     title: string;
@@ -67,3 +69,12 @@ export interface PopularDishesData{
         BookmarksIsFavorite:boolean;
     }>;
 }
+
+export interface TabsProps {
+    children: ReactNode[];
+  }
+  
+export interface TabProps {
+    label: string;
+    children: ReactNode;
+  }

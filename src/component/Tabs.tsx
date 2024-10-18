@@ -1,5 +1,5 @@
 import { useState, ReactElement } from 'react';
-import { TabsProps, TabProps } from "../interface/Interface"; // Assicurati che questi siano definiti correttamente
+import { TabsProps, TabProps } from "../interface/Interface"; 
 import React from 'react';
 
 const Tabs = ({ children }: TabsProps) => {
