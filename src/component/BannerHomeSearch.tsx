@@ -5,12 +5,10 @@ import Axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
-import { Recipe } from "../interface/Interface";
+import { Recipe } from '../interface/Interface'; // Importa l'interfaccia Recipe
 
 function BannerHomeSearch() {
-
   const navigateTo = useNavigate();
-
   const [dataInput, setDataInput] = useState<string>("");
 
   const dispatch = useDispatch();
@@ -25,7 +23,13 @@ function BannerHomeSearch() {
     }
   };
 
-  const handleInputSubmit = async (e: React.FormEvent<HTMLFormElement> | React.KeyboardEvent) => {
+  // Funzione per gestire il click del pulsante (MouseEvent)
+  const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    handleInputSubmit(e); // Richiama la funzione di submit generale
+  };
+
+  // Funzione generale per il submit (FormEvent o KeyboardEvent)
+  const handleInputSubmit = async (e: React.FormEvent<HTMLFormElement> | React.KeyboardEvent | React.MouseEvent) => {
     e.preventDefault();
     dispatch(removeSearch());
 
@@ -41,8 +45,8 @@ function BannerHomeSearch() {
           },
         }
       );
-      const data = response.data.results;
-      const filteredResults = data.filter((recipe:Recipe) =>
+      const data: Recipe[] = response.data.results; // Tipizza correttamente i dati come un array di ricette
+      const filteredResults = data.filter((recipe: Recipe) =>
         recipe.title.toLowerCase().includes(dataInput.toLowerCase())
       );
       if (filteredResults.length > 0) {
@@ -50,7 +54,7 @@ function BannerHomeSearch() {
         navigateTo("/recipes");
       } else {
         console.log("No recipes available with this search key");
-        navigateTo("/recipes")
+        navigateTo("/recipes");
       }
     } catch (error) {
       console.error("Error request API:", error);
@@ -69,7 +73,7 @@ function BannerHomeSearch() {
           <div className="mt-10 bg-white mx-auto rounded-3xl h-14 flex items-center justify-center w-full lg:w-auto">
             <button
               className="w-[60px] h-14 bgDark text-white rounded-tl-[15px] rounded-tr-[15px] rounded-br-[0px] rounded-bl-[15px]"
-              onClick={handleInputSubmit}
+              onClick={handleButtonClick} // Usa la funzione specifica per il click del pulsante
             >
               <IoIosSearch />
             </button>
