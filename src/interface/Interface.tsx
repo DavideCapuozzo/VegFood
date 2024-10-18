@@ -77,4 +77,9 @@ export interface TabsProps {
 export interface TabProps {
     label: string;
     children: ReactNode;
-  }
+}
+
+export interface CheckIngredientsProps{
+    name:string;
+    amount:string;
+}
