@@ -1,6 +1,6 @@
 import imgBannerSearch from "../assets/jo-sonn-M-tzZD5z720-unsplash2.png";
 import { useDispatch } from "react-redux";
-import { addSearch, removeSearch } from "../store/apiSlice";
+import { addSearch, removeSearch } from "../store/apiSlice.js";
 import Axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
