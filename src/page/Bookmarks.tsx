@@ -15,8 +15,8 @@ function Bookmarks() {
         }
     }, []);
 
-    const removeBookmarks = (id: number) => {
-        const updatedData = parsedData.filter(item => item.id !== id);
+    const removeBookmarks = (id: string) => {  
+        const updatedData = parsedData.filter(item => item.id !== id); 
         setParsedData(updatedData);
         localStorage.setItem('dataCard', JSON.stringify(updatedData));
     }; 
@@ -29,7 +29,7 @@ function Bookmarks() {
                 <h1 className="text-4xl md:text-5xl font-extrabold text-center pb-20">Your Favorite Recipes</h1>
             </div>
             <div>
-                {parsedData.length == 0 &&
+                {parsedData.length === 0 &&
                     <h2>You don't have any recipes saved as favorites</h2>
                 }
             </div>
