@@ -57,3 +57,13 @@ export interface TabCardPreparationProps{
     number:number 
     step:string 
 }
+
+export interface PopularDishesData{
+    results: Array<{
+        id: number;
+        title: string;
+        image: string;
+        imageType: string;
+        BookmarksIsFavorite:boolean;
+    }>;
+}
