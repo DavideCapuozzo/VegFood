@@ -5,6 +5,7 @@ import Axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
+import { Recipe } from "../interface/Interface";
 
 function BannerHomeSearch() {
 
@@ -14,17 +15,17 @@ function BannerHomeSearch() {
 
   const dispatch = useDispatch();
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDataInput(e.target.value);
   };
 
-  const handleKeyPress = (e) => {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       handleInputSubmit(e); // Avvia la ricerca quando premi Invio
     }
   };
 
-  const handleInputSubmit = async (e) => {
+  const handleInputSubmit = async (e: React.FormEvent<HTMLFormElement> | React.KeyboardEvent) => {
     e.preventDefault();
     dispatch(removeSearch());
 
@@ -41,7 +42,7 @@ function BannerHomeSearch() {
         }
       );
       const data = response.data.results;
-      const filteredResults = data.filter((recipe) =>
+      const filteredResults = data.filter((recipe:Recipe) =>
         recipe.title.toLowerCase().includes(dataInput.toLowerCase())
       );
       if (filteredResults.length > 0) {
