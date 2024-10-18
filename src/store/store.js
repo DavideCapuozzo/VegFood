@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { apiReducer } from './apiSlice'
+import { apiReducer } from '../store/apiSlice'
 
 export default configureStore({
     reducer:{
