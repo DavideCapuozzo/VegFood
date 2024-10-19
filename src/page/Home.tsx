@@ -29,7 +29,7 @@ const Home: React.FC = () => {
 
       <div className="my-24 px-8 sm:px-32">
         <div className="text-center">
-            <h2 className="text-4xl md:text-4xl font-extrabold text-center">Recipes of the Week</h2>
+            <h2 className="text-4xl md:text-4xl text-center">Recipes of the Week</h2>
         </div>
       </div>
 
