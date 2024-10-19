@@ -135,7 +135,7 @@ function DetailsRecipes() {
             <div className="absolute flex h-16 mt-[330px] ml-[300px] lg:ml-[500px]">
               <button
                 className="bg-[#13181B] rounded-tl-[21px] rounded-tr-[10px] rounded-br-[50px] rounded-bl-[21px] flex justify-center items-center focus:outline-none focus:ring-0"
-                onClick={toggleFavorite} // Aggiungi il toggleFavorite al click
+                onClick={toggleFavorite}
               >
                 <TiStar color={isFavorite ? "yellow" : "white"} size={13} />
               </button>

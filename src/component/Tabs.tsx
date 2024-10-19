@@ -21,7 +21,7 @@ const Tabs = ({ children }: TabsProps) => {
                         return (
                             <button
                                 key={child.props.label}
-                                className={`${activeTab === child.props.label ? 'underline underline-offset-1' : ''} flex-1 py-2 hover:outline-none hover:border-[#F8F8F8] focus:outline-none focus:border-none hover:text-slate-950`}
+                                className={`${activeTab === child.props.label ? 'underline underline-offset-1' : ''} flex-1 py-2 hover:outline-none hover:border-[#F8F8F8] focus:outline-none focus:border-none hover:text-slate-950 bg-[#F8F8F8]`}
                                 onClick={(e) => handleClick(e, child.props.label)}
                             >
                                 {child.props.label}
