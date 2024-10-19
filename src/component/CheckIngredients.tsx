@@ -20,7 +20,7 @@ const CheckIngredients: React.FC<CheckIngredientsProps> = ({ name, amount }) => 
                     </label>
                 </div>
                 
-                <p className="text-lg font-normal text-navy-700 dark:text-white m-auto">
+                <p className="text-lg font-normal text-navy-700 text-[#13181B] m-auto">
                     {name || 'N/A'} {amount || 'N/A'}
                 </p>
             </div>
