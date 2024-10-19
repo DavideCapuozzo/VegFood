@@ -73,13 +73,13 @@ function BannerHomeSearch() {
           <div className="mt-10 bg-white mx-auto rounded-3xl h-14 flex items-center justify-center w-full lg:w-auto">
             <button
               className="w-[60px] h-14 bgDark text-white rounded-tl-[15px] rounded-tr-[15px] rounded-br-[0px] rounded-bl-[15px]"
-              onClick={handleButtonClick} // Usa la funzione specifica per il click del pulsante
+              onClick={handleButtonClick}
             >
               <IoIosSearch />
             </button>
             <div className="flex items-center justify-center h-full text-center w-full">
               <input
-                className="w-full text-center focus:outline-none focus:ring-0"
+                className="w-full text-center focus:outline-none focus:ring-0 bg-[#ffffff]"
                 type="text"
                 value={dataInput}
                 onChange={handleInputChange}
