@@ -59,8 +59,8 @@ function Card({ id, image, title, BookmarksIsFavorite, removeBookmarks }: ICardP
 
     return (
         <>
-            <div className="sm:w-[500px] md:w-[300px] xl:w-[300px] 2xl:w-[350px] w-full">
-                <div className='mx-[4.2rem] my-[3rem] sm:mx-[6rem] sm:my-[3rem] md:mx-[1rem] md:my-[3rem] 2xl:m-9'>
+            <div className="sm:w-[500px] md:w-[300px] xl:w-[300px] w-full">
+                <div className='mx-[3.2rem] my-[3rem] sm:mx-[6rem] sm:my-[3rem] md:mx-[1rem] md:my-[3rem] 2xl:m-9'>
                     <Link rel="stylesheet" to={`/details/${id}`} >
                         <div className="relative flex justify-items-center flex-col rounded-3xl bg-white bg-clip-border text-gray-700 shadow-md">
                             <div className="relative flex justify-items-center min-[350px]:mx-4 min-[543px]:mx-16 sm:mx-5 -mt-8 overflow-hidden object-center rounded-full bg-blue-gray-500 bg-clip-border text-white ">
