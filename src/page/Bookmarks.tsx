@@ -26,7 +26,7 @@ function Bookmarks() {
             <ToastContainer></ToastContainer>
             <Menu />
             <div className="mt-24 font-medium text-xl">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-center pb-20">Your Favorite Recipes</h1>
+                <h1 className="text-3xl md:text-5xl font-bold text-center pb-20">Your Favorite Recipes</h1>
             </div>
             <div>
                 {parsedData.length === 0 &&
