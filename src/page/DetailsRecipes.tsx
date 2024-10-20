@@ -145,7 +145,7 @@ function DetailsRecipes() {
       </div>
 
       <div className="text-center bg-white lg:px-[150px]">
-        <h2 className="leading-tight" id="h2Details">{data.title || "Recipe Title"}</h2>
+        <h2 className="leading-tight text-3xl md:text-5xl font-bold text-center" id="h2Details">{data.title || "Recipe Title"}</h2>
         <p className="pt-5" id="pDetails">
           {data.nutrition.nutrients.find((n) => n.name === "Calories")
             ?.amount || "N/A"}{" "}
