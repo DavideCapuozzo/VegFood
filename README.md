@@ -6,7 +6,7 @@
 
 <h4 align="center">Service based on Spooncular Bees, which provide thousands of vegetarian recipes. The site created in React and Typescript allows users to search for recipes and save them as favorites.<a href="https://vegfoodreact.netlify.app/" target="_blank"> Try it</a></h4><br>
 
-<a href="https://vegfoodreact.netlify.app/">![Immagine 2024-10-21 214139](https://github.com/user-attachments/assets/c5e2aac3-3aa8-4b79-91e9-09997e7ee615)
+<a href="https://vegfoodreact.netlify.app/" target=”_blank”>![Immagine 2024-10-21 214139](https://github.com/user-attachments/assets/c5e2aac3-3aa8-4b79-91e9-09997e7ee615)
 </a>
 
 
