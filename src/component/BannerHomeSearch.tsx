@@ -19,16 +19,16 @@ function BannerHomeSearch() {
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      handleInputSubmit(e); // Avvia la ricerca quando premi Invio
+      handleInputSubmit(e); 
     }
   };
 
-  // Funzione per gestire il click del pulsante (MouseEvent)
+  
   const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    handleInputSubmit(e); // Richiama la funzione di submit generale
+    handleInputSubmit(e); 
   };
 
-  // Funzione generale per il submit (FormEvent o KeyboardEvent)
+  
   const handleInputSubmit = async (e: React.FormEvent<HTMLFormElement> | React.KeyboardEvent | React.MouseEvent) => {
     e.preventDefault();
     dispatch(removeSearch());
@@ -45,7 +45,7 @@ function BannerHomeSearch() {
           },
         }
       );
-      const data: Recipe[] = response.data.results; // Tipizza correttamente i dati come un array di ricette
+      const data: Recipe[] = response.data.results; 
       const filteredResults = data.filter((recipe: Recipe) =>
         recipe.title.toLowerCase().includes(dataInput.toLowerCase())
       );
