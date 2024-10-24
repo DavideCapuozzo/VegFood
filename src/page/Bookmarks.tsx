@@ -24,7 +24,11 @@ function Bookmarks() {
     return (
         <>
             <ToastContainer></ToastContainer>
-            <Menu />
+            <div className="w-full sm:min-w-[500px] md:min-w-[769px] lg:min-w-[1025px] xl:min-w-[1281px] 2xl:min-w-[1500px]">
+                <Menu />
+            </div>
+            
+            
             <div className="mt-24 font-medium text-xl">
                 <h1 className="text-3xl md:text-5xl font-bold text-center pb-20">Your Favorite Recipes</h1>
             </div>
