@@ -27,10 +27,7 @@ function DetailsRecipes() {
       if (storedData) {
         const parsedBookmarks: IBookmark[] = JSON.parse(storedData);
         console.log("parsedBookmarks ===", parsedBookmarks);
-
         setParsedData(parsedBookmarks);
-
-        // Verifica se l'ID attuale è nei segnalibri
         const isFavorited = parsedBookmarks.some(
           (item) => String(item.id) === detailsID
         );

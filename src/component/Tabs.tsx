@@ -3,7 +3,6 @@ import { TabsProps, TabProps } from "../interface/Interface";
 import React from 'react';
 
 const Tabs = ({ children }: TabsProps) => {
-    // Controlla se ci sono children e assegna un valore predefinito
     const initialActiveTab = React.Children.count(children) > 0 ? (children as ReactElement[])[0].props.label : "";
     const [activeTab, setActiveTab] = useState(initialActiveTab);
 
@@ -16,7 +15,6 @@ const Tabs = ({ children }: TabsProps) => {
         <div className="max-w-full mx-auto bg-white">
             <div className="flex border-gray-300 bg-[#F8F8F8] h-20">
                 {React.Children.map(children, (child) => {
-                    // Verifica che child sia un ReactElement
                     if (React.isValidElement(child)) {
                         return (
                             <button

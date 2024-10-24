@@ -50,10 +50,8 @@ function Card({ id, image, title, BookmarksIsFavorite, removeBookmarks }: ICardP
               });
         }
 
-        // Aggiorna il localStorage
         localStorage.setItem('dataCard', JSON.stringify(parsedData));
 
-        // Log per verificare cosa viene salvato
         console.log('TEST DATA ==', JSON.stringify(parsedData));
     };
 
